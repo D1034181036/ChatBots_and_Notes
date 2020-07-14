@@ -1,0 +1,29 @@
+# 登入 
+# 密碼要加!
+heroku login
+
+# 上傳資料夾到heroku
+git add .
+git commit -m "註解"
+git push heroku master
+
+heroku logs -t
+
+
+# rails console
+KeywordMapping.all
+KeywordMapping.create({keyword:"Q2", message:"A2"})
+KeywordMapping.where(keyword:"Q2")
+KeywordMapping.where(keyword:"Q2").last.message
+
+
+# 資料庫遷移
+heroku run rake db:migrate
+
+rails db:migrate
+rails db:migrate:status
+
+User.create(email:'jwsh09910062@gmail.com', password:'a77112222')
+
+heroku git:clone -a imsohappydog
+

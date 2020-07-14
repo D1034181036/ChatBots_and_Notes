@@ -1,0 +1,24 @@
+
+(1)安裝與註冊Parsec遠端遊戲軟體。(https://parsecgaming.com/downloads/)
+
+(2)安裝VNC遠端軟體，僅第一次登入時需要。(https://www.realvnc.com/en/connect/download/viewer/)
+
+(2)選擇適合的EC2伺服器，如東京。(https://www.cloudping.info/)
+
+(3)開啟一個Instance，這邊選擇g4dn.xlarge一般價為(0.894 USD/hr)，也可以使用spot instance比較便宜(約0.397 USD/hr)。
+	(3-1)選擇AMI:在Community AMIs中搜尋"Parsec" 選擇g4dn.xlarge的版本。
+	(3-2)選擇Instance Type:g4dn.xlarge
+	(3-3)視需求調整硬碟大小(建議100GB以上)
+	(3-4)啟動Instance，選擇proceed without a key pair。
+
+(4)在Security Groups中，Inbound打開port5900(TCP)，Outbound/Inbound打開port8000-8021(UDP)。
+
+(5)使用VNC與IP登入Instance，默認密碼為"4ubg9sde"，進入Instance後使用桌面上的Parsec登入你的帳號。
+
+(6)使用自己電腦上的Parsec連線進入Instance，開始遊戲。(桌面預設有Steam與Epic Games)
+
+(7)使用結束後記得刪除Instance，價錢以小時計，不滿一小時也會算一小時。
+
+備註:可使用Snapshots儲存硬碟內容，就可以不用每次都要重新載遊戲。
+
+Reference: Using The Parsec AMI On Amazon (https://support.parsecgaming.com/hc/en-us/articles/115003642812-Using-The-Parsec-AMI-On-Amazon)
