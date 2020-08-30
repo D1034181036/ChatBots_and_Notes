@@ -1,10 +1,10 @@
-# µn¤J 
-# ±K½X­n¥[!
+# ç™»å…¥ 
+# å¯†ç¢¼è¦åŠ !
 heroku login
 
-# ¤W¶Ç¸ê®Æ§¨¨ìheroku
+# ä¸Šå‚³è³‡æ–™å¤¾åˆ°heroku
 git add .
-git commit -m "µù¸Ñ"
+git commit -m "è¨»è§£"
 git push heroku master
 
 heroku logs -t
@@ -17,13 +17,13 @@ KeywordMapping.where(keyword:"Q2")
 KeywordMapping.where(keyword:"Q2").last.message
 
 
-# ¸ê®Æ®w¾E²¾
+# è³‡æ–™åº«é·ç§»
 heroku run rake db:migrate
 
 rails db:migrate
 rails db:migrate:status
 
-User.create(email:'jwsh09910062@gmail.com', password:'a77112222')
+User.create(email:'jwsh09910062@gmail.com', password:'a712')
 
 heroku git:clone -a imsohappydog
 
